@@ -29,3 +29,15 @@ of basic python commands and syntax for me and I got to learn more about picklin
 This serves as a good base project to be prepared for the upcoming assignments.
 
 
+## Assignment 2 - Word Guessing Game
+
+This program is meant to get comfortable with python coding practices as well as using the NLTK library.
+
+The program reads in a text file and tokenizes the words through NLTK to get all the nouns
+in the text. It then lets the user play a word guessing game with the nouns as the word bank
+for the program to randomly chose from.
+
+You can see the [code here](NLP_Homework2/zas180004_hw2.py)
+
+To run the program, use the following command within the same directory as the file:
+python3 zas180004_hw2.py (insert path to text file)
