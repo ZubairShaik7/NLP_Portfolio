@@ -41,3 +41,9 @@ You can see the [code here](NLP_Homework2/zas180004_hw2.py)
 
 To run the program, use the following command within the same directory as the file:
 python3 zas180004_hw2.py (insert path to text file)
+
+## Assignment 3 - WordNet Usage
+
+This file was meant to gain more familiarity with WordNet
+
+You can see the [code here](WordNet_Assignment.pdf)
