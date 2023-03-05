@@ -47,3 +47,15 @@ python3 zas180004_hw2.py (insert path to text file)
 This file was meant to gain more familiarity with WordNet
 
 You can see the [code here](WordNet_Assignment.pdf)
+
+## Assignment 4 - N-Grams Model
+
+This program allowed us to create a language model through N-Grams and test it out on a text file to determine
+the accuracy of the model.
+
+You can see the code where we created the unigram and bigram dictionaries from the corpus
+[here](NLP_Homework3/zas180004_hw3_program1.py)
+
+The code for test our model can be found [here](NLP_Homework3/zas180004_hw3_program2.py)
+
+A short narrative on N-Grams can be found [here](NLP_Homework3/N-gram-narrative.pdf)
