@@ -87,7 +87,7 @@ def preprocessText(text):
     # get the pos for the lemmas
     tags = nltk.pos_tag(lemmas_unique)
 
-    print("\nSome POS tagged words are:\n", tags[:20])
+    print("\nSome  tagged words are:POS\n", tags[:20])
 
     # get all the nouns from the tags list and return them to the main function
     nouns = list()
