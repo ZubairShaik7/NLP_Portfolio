@@ -1,37 +1,47 @@
 
-<! 
-[endif] Toggle navigation About FIFA Development Governance Sustainability 2230929 We use "cookies" to collect information. 
-Click here to read more. 
-Home Page googleoff: index English English Deutsch FranÃ§ais EspaÃ±ol PortuguÃªs Ø¹Ø±Ø¨Ù Ð ÑÑÑÐºÐ¸Ð¹ æ¥æ¬èª íê¸ googleon: index esi <esi:choose> <esi:when test="$exists($(HTTP_COOKIE{'FIFAComTracking'}))"> $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'FIFAComTracking'}))+ ';path=/;domain=.fifa.com; ') </esi:when> <esi:when test="$exists($(HTTP_COOKIE{'MobileFIFAComTracking'}))"> $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'MobileFIFAComTracking'}))+ ';path=/;domain=.fifa.com; ') </esi:when> </esi:choose> News Photos Videos FIFA World Cupâ¢ FIFA Tournaments Women's Football FIFA Ranking Live Scores The Best FIFA Football Awards Associations Media About FIFA Development Governance Sustainability Events FIFA Beach Soccer World Cup Bahamas 2017 27 Apr 2017 - 07 May 2017 - Bahamas AFC Congress 08 May 2017 - Manama Confederation meetings/Congresses 10 May 2017 - Manama Meetings Audit and Compliance Committee 08 May 2017 - Manama Finance Committee 09 May 2017 - Manama FIFA Council meeting 09 May 2017 - Manama Full calendar The Official Online Store adidas Russia Home Jersey 2017 $99.99 adidas Germany Home Jersey 2017 $89.99 2018 FIFA World Cupâ¢ Russia Zabivakaâ¢ Mascot Toddler Tee $14.99 adidas Krasava FIFA Confederations Cup Official Match Ball $159.99 Shop Now Search fifa.wholesite Search Powered by Advanced Search The Club 2879521 Shortlists revealed. 
-VOTE NOW! 
-Voting for the FIFA Confederations Cup Russia 2017 Be There With Hyundai Contest is now open! 
-24 slogans submitted by FIFA Club members have made the final shortlist. 
-Register Login Please sign in to your FIFA.com user account below. 
-This will allow you to make the most of your account with personalization, plus get access to commenting tools, exclusive games, the chance to win cool football prizes and much, much more. 
-Login The Club 2879521 Shortlists revealed. 
-VOTE NOW! 
-Voting for the FIFA Confederations Cup Russia 2017 Be There With Hyundai Contest is now open! 
-24 slo... FIFA.com Club News Activities FIFA Predictor FIFA Ultimate Trivia Discover Your Profile Screen Name Edit Comments Log out Login Error The email address/password you submitted is wrong or could not be found. 
-Please try again. 
-If you are not a member of the FIFA.com Club, please register first. 
-The email address/password you submitted is wrong or could not be found. 
-Please try again. 
-If you are not a member of the FIFA.com Club, please register first. 
-This Facebook account is already present Your Club account has been locked due to a breach of our Terms of Service. 
-Please set up a new account in line with the Club rules. 
-Review the Club Rules . 
-Alternatively, you can email us by completing our contact form . 
-Please enter a valid email address The email address/password you submitted is wrong or could not be found. 
-Please try again. 
-If you are not a member of the FIFA.com Club, please register first. 
-Log-in unsuccessful The social profile is already linked to a FIFA.com Account Governance News Photos Videos How FIFA Works Competition Disciplinary Finances Playersâ Status and Transfers Security Ethics Follow us on Share 2882666 Media Release FÃ©dÃ©ration Internationale de Football Association FIFA-Strasse 20 - P.O. 
-Box - 8044 Zurich - Switzerland Tel: +41-(0)43-222 7777 - Fax: +41-(0)43.222 7878 googleoff: index Football Governance googleon: index FIFA Appeal Committee passes decision on Lionel Messi googleoff: index (FIFA.com) 05 May 2017 googleon: index Â© Getty Images The FIFA Appeal Committee has upheld the appeal lodged by the Argentinian Football Association, on behalf of the player Lionel Messi, against the decision taken by the FIFA Disciplinary Committee, lifting the sanctions imposed on him as a result. 
-Following a hearing which took place in Zurich on 4 May 2017, the Appeal Committee has set aside the decision taken by the FIFA Disciplinary Committee on 28 March 2017, which, in application of art. 
-77 a) of the FIFA Disciplinary Code (FDC), had found Lionel Messi guilty of infringing art. 
-57 of the FDC for having directed insulting words at an assistant referee. 
-Despite the fact that the FIFA Appeal Committee considered Lionel Messi’s behaviour as reproachable, the former concluded that the evidence available was not sufficient to establish to the appropriate standard, i.e. 
-to the comfortable satisfaction of the members of the Appeal Committee, that art. 
-77 a) of the FDC, according to which the Disciplinary Committee is responsible for sanctioning serious infringements which have escaped the match officials’ attention, could be applied. 
-The Appeal Committee nevertheless underlines the importance of always showing respect to the match officials, stressing that such a principle is essential in football and any unsporting conduct that may be contrary to the principles of fair play cannot be accepted. 
-In view of the above decision, the suspension for four matches imposed on Lionel Messi, which entered into force on 28 March 2017, and the fine of CHF 10,000 have been lifted. 
-Related Items googleoff: index Russia 2018 googleon: index Lionel Messi suspended for four matches googleoff: index Tuesday 28 March 2017 googleon: index Legal and Disciplinary Lionel MESSI Argentina googleoff: index English English Deutsch FranÃ§ais EspaÃ±ol PortuguÃªs Ø¹Ø±Ø¨Ù Ð ÑÑÑÐºÐ¸Ð¹ æ¥æ¬èª íê¸ googleon: index Copyright Â©1994 - 2017 FIFA.
+ [IE]><script>window.isIE = true</script><! 
+[endif] Skip to main content Open menu Close menu FourFourTwo Football news, features, statistics Search Search FourFourTwo Sign in View Profile Sign out Subscribe US Edition UK Australia US Canada 대한민국 Türkiye promotionFallbackMessage Quizzes Features News Clubs Subscribe! 
+Newsletter Trending Watch the World Cup final World Cup 2022 Transfer news Buying guides When you purchase through links on our site, we may earn an affiliate commission. 
+Here’s how it works . 
+Home Features FourFourTwo's 100 Greatest Footballers EVER: No.2, Lionel Messi By Thore Haugstad published 28 July 2017 Aged 30, he’s broken all-time records while lifting a host of personal and club awards – yet it’s only in watching Messi you can appreciate a one-off genius One way to try to express the greatness of Lionel Messi is to list his records and awards: the unrivalled five Ballon d’Ors, the 30 club trophies, the 91 goals in one calendar year, his status as top scorer of Argentina, Barcelona and La Liga. 
+And then conclude that this method is entirely unsatisfactory. 
+The history books will laud Messi, and yet their limitations will do him a disservice. 
+In 20 years, young football fans will read about a messianic figure whose brilliance stunned the world, shattered a litany of records and started an era of dominance – but not until they watch the videos will they get an idea of what they have missed. 
+Beauty and the best The quantity of his goals pale in comparison with their beauty. 
+The goal of the month may not even make his top 20, be it a solo run, a bending free-kick, a cheeky lob, a golf putt finish or a thunderous missile. 
+Messi has the most recorded assists in La Liga’s history, but that fact is less impressive than how they were made: the deft lay-offs, the ingenious killer passes, the deliveries that bend around defenders as if controlled by a remote. 
+In addition, a large portion of his finest passes were squandered, and so have never been quantified at all. 
+Never has Messi, now 30, better balanced playmaking, dribbling and goalscoring By now most know his story: how expensive medicine for a growth hormone deficiency led him from his home town Rosario to Barcelona, where his 2004 debut started an era of brilliance. 
+He has been voted into the world's top three players for 10 years, and in the top two for nine. 
+It’s one thing to reach the top, quite another to stay there. 
+There are fans well into their teens who have never known a world in which Messi is not spellbinding us on a weekly basis. 
+Only by evolution has Messi managed to maintain his level. 
+The livewire dribbler has become a mature playmaker who now dictates play while still proving decisive in the final third. 
+Never has Messi, now 30, better balanced playmaking, dribbling and goalscoring. 
+As Javier Mascherano has said, he is three players in one. 
+You could argue that one of the greatest goalscorers of all time is also the best passer, and you would not lack evidence to support your claim. 
+A decade of Messi The last decade will go down as the Barça of Messi era. 
+As coaches have come and gone, he has been the one constant; four of their five Champions League titles have come in his time. 
+So good has he been that some consider that trophy haul an underachievement. 
+Yet Messi is not finished. 
+A World Cup next year presents another shot at glory with Argentina, and he should still be around for 2022, his legs slower but his mind still sharp. 
+In the meantime, pundits, fans and writers will try to express his greatness with words and metaphors. 
+They will all fail, as will the article you are reading now. 
+The best we can do is listen to Pep Guardiola, who said: “Don’t write about him, don’t try to describe him. 
+Just watch him.” Career highlight Days after criticism of his aerial game, Messi steered a looping header over Edwin van der Sar that sealed Barcelona’s 2-0 win over Manchester United in the 2009 Champions League Final. 
+It's one of his personal favourites, he told FFT recently. 
+Messi: The header to beat Manchester United in 2009 is still one of my favourite goals What happened when we met Lionel Messi – and let him edit FourFourTwo magazine The list 100 to 91 • 90 to 81 • 80 to 71 • 70 to 61 • 60 to 51 • 50 to 41 • 40 to 31 • 30 to 21 20 • 19 • 18 • 17 • 16 • 15 • 14 • 13 • 12 • 11 • 10 • 9 • 8 • 7 • 6 • 5 • 4 • 3 • 2 • 1 FourFourTwo's 100 Greatest Footballers EVER Thank you for reading 5 articles this month* Join now for unlimited access Enjoy your first month for just £1 / $1 / €1 Join now Already have an account ? 
+Sign in here *Read 5 free articles per month without a subscription Join now for unlimited access Try first month for just £1 / $1 / €1 Join now Already have an account ? 
+Sign in here FourFourTwo Newsletter Get the best features, fun and footballing frolics straight to your inbox every week. 
+Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors By submitting your information you agree to the Terms & Conditions (opens in new tab) and Privacy Policy (opens in new tab) and are aged 16 or over. 
+Thore Haugstad Social Links Navigation Topics FFT 100 Greatest Lionel Messi Argentina Barcelona FFT 100 Greatest FourFourTwo Newsletter Get the best features, fun and footballing frolics straight to your inbox every week. 
+Name: Your Email Address : Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors Thank you for signing up to Four Four Two. 
+You will receive a verification email shortly. 
+There was a problem. 
+Please refresh the page and try again. 
+By submitting your information you agree to the Terms & Conditions (opens in new tab) and Privacy Policy (opens in new tab) and are aged 16 or over. 
+MOST READ 1 Haaland penalty breaks Crystal Palace resistance as Manchester City march on 2 Who is on Match of the Day this weekend and how will it work? 
+3 Chelsea beat Leicester to win three games in a row for the first time since October 4 Newcastle United v Wolves live stream, match preview, team news and kick-off time for this Premier League match 5 Richarlison's 'sh** season' continues as goal ruled offside by VAR in Tottenham vs Forest FourFourTwo is part of Future US Inc, an international media group and leading digital publisher. 
+Visit our corporate site (opens in new tab) . 
+Terms and conditions (opens in new tab) Privacy policy (opens in new tab) Cookies policy (opens in new tab) Accessibility statement Careers (opens in new tab) About FourFourTwo (opens in new tab) Advertise with us (opens in new tab) Worldwide (opens in new tab) © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York, NY 10036. 
+Begin comScore Tag End comScore Tag Google Tag Manager End Google Tag Manager document assets - added by the article itself
