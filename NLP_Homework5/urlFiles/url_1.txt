@@ -1,0 +1,915 @@
+
+ 
+ 
+ 
+  Loading script asynchronously  
+ 
+  *************** HEADER *************************  
+ 
+ [if lte IE 7]>
+  <div id="ie_old">
+    <a href="#" class="cerrar" id="cerrar_ieold">cerrar</a>
+    <b>Actualice su navegador</b>
+    <br />
+    El navegador que está usando en este momento se encuentra desfasado y no cumple los estándares actuales para páginas web. Si quiere disfrutar una versión actualizada de este y otros sitios web, recomendamos que lo actualice gratuitamente a través de uno de estos enlaces:
+    <br />
+    <a href="http://www.microsoft.com/latam/windows/internet-explorer/" title="Última versión de Internet Explorer" class="ie" target="_blank">Internet Explorer 9</a>
+    <a href="http://www.mozilla-europe.org/es/firefox/" title="Última versión de Firefox" class="firefox" target="_blank">Mozilla Firefox</a>
+    <a href="http://www.google.es/chrome/" title="Última versión de Google Chrome" class="chrome" target="_blank">Google Chrome</a>
+  </div>
+<![endif] 
+ 
+  ...Header Admin Elements...  
+ 
+  CABECERA REVISTA LÍBERO  
+ 
+   
+ 
+  ANUNCIO LIGABBVA GAME  
+ 
+ 
+  ANUNCIO BBVA WALLET 
+ <script src="https://prensabbva.s3.amazonaws.com/ligabbva/banners/jquery.peelback.js"></script>  
+ <script>
+   $(function() {
+     $('body').peelback({
+       smallAdImage: 'http://prensabbva.s3.amazonaws.com/ligabbva/img/bbvawallet/LGP-peeladsmallbase-00.png',      
+       adImage     : 'http://prensabbva.s3.amazonaws.com/ligabbva/img/bbvawallet/LGP-peeladbase-01.png',
+       peelImage   : 'https://s3-eu-west-1.amazonaws.com/prensabbva/ligabbva/banners/peel-image.png',
+       clickURL    : 'http://bbva.info/1CSMShV',
+       smallSize   : 150,
+       bigSize     : 500,
+       gaTrack     : true,
+       autoAnimate : true
+     });
+   });
+ </script>  
+  CABECERA TOP CON ENLACES  
+ 
+ 
+ 
+ 
+ 
+  CABECERA TOP DIRECTOS
+
+
+<img src="http://prensabbva.s3.amazonaws.com/ligabbva/img/cabecera-ligabbva.com-banner02.gif" alt="LigaBBVA.com" title="LigaBBVA.com" width="980" height="109" usemap="#Map"/>
+<map name="Map">
+  <area shape="rect" coords="608,23,717,96" href="http://www.ligabbva.com/4838_liga-bbva/index.html" target="_self" alt="Sigue en directo web los partidos de la jornada">
+  <area shape="rect" coords="733,22,836,97" href="http://www.ligabbva.com/3176_clasificacion/index.html" target="_self" alt="La clasificación de la LigaBBVA">
+  <area shape="rect" coords="7,3,591,117" href="http://www.ligabbva.com" target="_self" alt="LigaBBVA.com">
+</map>  
+ 
+ 
+  ...Header Admin Elements End...  
+  ...Menu...  
+ 
+ 
+ 
+ Portada 
+ 
+ 
+ Liga BBVA  
+ 
+ 
+ Liga Adelante 
+ 
+ 
+ Fichajes 15-16 
+ 
+ 
+ Clasificación 
+ 
+ 
+ Clasificación Liga BBVA 
+ 
+ 
+ Clasificación Liga Adelante 
+ 
+ 
+ La radiografía de la jornada 
+ 
+ 
+ El especialista 
+ 
+ 
+ Estrellas 
+ 
+ 
+ 'La otra mirada' 
+ 
+ 
+ 
+ 
+ Estadísticas 
+ 
+ 
+ Horarios 
+ 
+ 
+ Liga BBVA 
+ 
+ 
+ Liga Adelante 
+ 
+ 
+ 
+ 
+ Resultados 
+ 
+ 
+ Liga BBVA 
+ 
+ 
+ Liga Adelante 
+ 
+ 
+ 
+ 
+ DIRECTOS 
+ 
+ 
+ Liga BBVA 
+ 
+ 
+ Liga Adelante 
+ 
+ 
+ Liga de Campeones 
+ 
+ 
+ Supercopa 
+ 
+ 
+ 
+ 
+ Equipos 
+ 
+ 
+ Almería 
+ 
+ 
+ Athletic de Bilbao 
+ 
+ 
+ Atlético 
+ 
+ 
+ Barcelona 
+ 
+ 
+ Celta 
+ 
+ 
+ Córdoba 
+ 
+ 
+ Deportivo 
+ 
+ 
+ Eibar 
+ 
+ 
+ Elche 
+ 
+ 
+ Espanyol 
+ 
+ 
+ Getafe 
+ 
+ 
+ Granada 
+ 
+ 
+ Levante 
+ 
+ 
+ Málaga 
+ 
+ 
+ Rayo Vallecano 
+ 
+ 
+ Real Madrid 
+ 
+ 
+ Real Sociedad 
+ 
+ 
+ Sevilla 
+ 
+ 
+ Valencia 
+ 
+ 
+ Villarreal 
+ 
+ 
+ 
+ 
+ 'Premios BBVA' 
+ 
+ 
+ Vídeos 
+ 
+ 
+ Fotos 
+ 
+ 
+ Uruguay 
+ 
+ 
+ Turquía 
+ 
+ 
+ Perú 
+ 
+ 
+ Paraguay 
+ 
+ 
+ México 
+ 
+ 
+ Colombia 
+ 
+ 
+ Chile 
+ 
+ 
+ Argentina 
+ 
+ 
+ Revista Líbero 
+ 
+ 
+ Fundéu 
+ 
+ 
+ Liga BBVA del Español Urgente 
+ 
+ 
+ Crónica futbolística 
+ 
+ 
+ Píldoras lingüísticas 
+ 
+ 
+ Jugada lingüística 
+ 
+ 
+ 
+ 
+ Embajadores BBVA 
+ 
+ 
+ Carlos Soria 
+ 
+ 
+ Garbiñe Muguruza 
+ 
+ 
+ El Celler de Can Roca 
+ 
+ 
+ 
+ 
+ LigaBBVA Game 
+ 
+ 
+ Acceso a Liga BBVA Game 
+ 
+ 
+ Liga BBVA Game News 
+ 
+ 
+ 
+ 
+ TLife 
+ 
+ 
+ Ruta BBVA 
+ 
+ 
+ Copa América 
+ 
+ 
+ 
+ 
+  ...Menu end...  
+ 
+ 
+ 
+ ÚLTIMAS NOTICIAS: 
+ 
+ 
+  ...Share elements...  
+ 
+ Facebook 
+ Twitter 
+ Google Plus 
+ YouTube 
+ RSS Youtube 
+ 
+  ...Share elements end...  
+  ...Search form...  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  ...Search form end...  
+ 
+  h_toolbar end  
+  page_shadow end  
+ 
+  header end  
+  *************** HEADER END *********************  
+ 
+ 
+ 
+ 
+  *************** CONTENT COLUMN *************************  
+ 
+  ...News detail...  
+ 
+  Liga BBVA 
+   Volver a "Liga BBVA " 
+ 
+ 
+ Messi también es leyenda en el ranking histórico de asistencias 
+ 
+ 
+    MÁXIMO ASISTENTE HISTÓRICO | 19 de febrero de 2015
+     
+  share tools  
+ 
+ Facebook 
+ Twitter 
+ Menéame 
+ 
+  Google +1 button  
+ 
+ 
+ 
+  Google +1  
+ 
+  share tools end  
+ 
+  info end  
+ 
+ 
+ 
+ 
+ Ampliar 
+ 
+  El ranking de los máximos asistentes de la Liga BBVA  
+ 
+ LIGABBVA.COM .-  Leo Messi  es el mejor asistente en la historia Liga BBVA. El argentino parece no cansarse de batir récords aunque esta vez no sean goleadores. 106 son los pases de gol que lleva tras 300 partidos en la mejor liga del mundo. Supera a Figo y se queda en solitario en el ranking histórico, y en el de la actual temporada donde suma 13, tres más que Cristiano. 
+ 
+ Messi  hace de todo, y para todos. El argentino sigue líder en un ranking de asistentes que  tiene un dominador claro . El '10' culé repartió otro pase de gol en el Camp Nou, y ya van trece. Unas cifras casi mágicas para un jugador superlativo. En los 300 partidos que ha jugado en Liga BBVA ha repartido 1 06 asistencias  lo que le convierte en el  máximo asistente en la historia  de la Liga BBVA. 
+ Cristiano no marcó pero se lo dio en bandeja a Benzema 
+ Segundo se queda en solitario  Cristiano Ronaldo.  El crac luso del  Real Madrid  aumentó en una asistencia sus guarismos tras ponerle en bandeja el gol a  Benzema . Se queda con  10  asistencias, a tres de un de momento imparable Leo Messi. 
+ Cheryshev  se sitúa tercero también en solitario con  9 asistencias  y 28 ocasiones de gol generadas. El ruso no pudo aumentar la cuenta en una jornada en la que su equipo cayó por  2-0 en Vallecas . Meritorio curso para el exmadridista. 
+ Koke  ocupa la cuarta plaza con  8 asistencias , las mismas que  Benzema . El galo dio un pase de gol a Isco e irrumpe en el quinto puesto, empatado con  Luis Suárez . Los  dos '9 distintos'  de la Liga BBVA también encuentran su sitio entre los mejores pasadores. 
+ 
+  post end  
+  detailbox end  
+  pre  
+  /pre  
+ 
+  ...News detail end...  
+ 
+ 
+ 
+ Comentarios (1) 
+ Añadir comentario 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 19 de febrero de 2015 - 17:22 GMT 
+ #1.  Luis 
+ 
+ [  contestar  ] 
+ Messi 
+ messi es el Maximo goleador 
+ 
+ 
+ 
+ Deja tu comentario 
+ 
+ Página: 
+ 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Normas de comentarios 
+ 
+ www.ligabbva.com  no se hace responsable de las ideas expresadas por los autores de los comentarios y se reserva el derecho a eliminar aquellos contenidos que:
+     
+ resulten ofensivos y/o discriminatorios 
+ que tengan como fin promover el boicot contra personas, productos empresas o instituciones 
+ que atenten contra el derecho a la intimidad, al honor y/o a la propia imagen o nombre 
+ aquellos que busquen fines comerciales y/o publicitarios 
+ 
+ 
+ 
+ 
+ Autor: 
+ 
+ 
+ 
+ Título: 
+ 
+ 
+ 
+ Texto: 
+ 
+ 
+ 500  caracteres disponibles 
+ 
+ Para evitar spam, por favor resuelva este simple problema matematico e ingrese el resultado (pinche en la imagen para recargarla). 
+ 
+ Resultado: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  ...newslist - large news...  
+ 
+ Liga BBVA  
+ 
+ 
+  ...newslist - large news end...  
+  ...newslist - small news...  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1-1. El Athletic empata con el Krasnodar en su primer test en Austria 
+ 
+  |                 FÚTBOL AMISTOSO
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Deportivo finaliza la segunda semana de pretemporada con Laure al margen 
+ 
+  |                 FÚTBOL DEPORTIVO
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ghilas supera reconocimiento médico y firma por el Levante 
+ 
+  |                 FÚTBOL LEVANTE
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Valencia disputará un amistoso ante PSV Eindhoven el 25 de julio en Alzira 
+ 
+  |                 FÚTBOL VALENCIA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Lora afirma que Abelardo es parecido a Preciado, triunfa porque es exigente y cercano 
+ 
+  |                 FÚTBOL REAL SPORTING
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Rafa Benítez exige intensidad en la primera sesión de la jornada 
+ 
+  |                 FÚTBOL REAL MADRID
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Celta anuncia el fichaje del delantero sueco John Guidetti 
+ 
+  |                 FÚTBOL CELTA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Betis completa su primera semana de trabajo con seis caras nuevas 
+ 
+  |                 FÚTBOL BETIS
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ La Real busca su primera victoria en pretemporada ante el Saint Johnstone 
+ 
+  |                 FÚTBOL REAL SOCIEDAD
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delantero holandés Tighadouini, nuevo jugador del Málaga por cinco temporadas 
+ 
+  |                 FÚTBOL MÁLAGA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Berizzo modifica el plan de entrenamiento 
+ 
+  |                 FÚTBOL CELTA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Atlético presenta el lunes a Yannik Carrasco en Majadahonda 
+ 
+  |                 FÚTBOL ATLÉTICO DE MADRID
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Barcelona comenzará la pretemporada el próximo lunes 
+ 
+  |                 FÚTBOL BARCELONA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Joan Oliver será el director general del Barcelona si gana Laporta 
+ 
+  |                 FÚTBOL BARCELONA ELECCIONES
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ La salida de Casillas del Real Madrid y la 'pasión turca' de Arda Turan en el Camp Nou, en portada 
+ 
+  |                 PRENSA DEL DÍA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Insúa deja el Atlético y firma por el Stuttgart hasta 2018 
+ 
+  |                 FÚTBOL ALEMANIA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Arda Turan: "Cristiano es especial pero Messi es el mejor de la Historia" 
+ 
+  |                 EL TURCO, PRESENTADO CON EL BARCELONA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Marcelo renueva con el Real Madrid hasta 2020 
+ 
+  |                 LATERAL PARA MUCHOS AÑOS
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Para triunfar en la Liga BBVA, se debe fichar por el Getafe 
+ 
+  |                 REAL MADRID Y VALENCIA NUTREN AL CLUB
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mujeres al mando en el fútbol español 
+ 
+  |                 TRES EN LIGA BBVA Y DOS EN LIGA ADELANTE
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ El Atlético ficha al belga Ferreira Carrasco, del Mónaco 
+ 
+  |                 FÚTBOL ATLÉTICO
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Amrabat tuvo "claro que quería" quedarse porque en Málaga se siente "importante" 
+ 
+  |                 FÚTBOL MÁLAGA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Nuno podrá "valorar" al equipo tras enfrentarse "a grandes equipos" 
+ 
+  |                 FÚTBOL VALENCIA
+               
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Gaizka Toquero rescinde su contrato con el Athletic 
+ 
+  |                 FÚTBOL ATHLETIC BILBAO
+               
+ 
+ 
+ 
+ 
+ 
+   nsmall end  
+ 
+  ...newslist - small news end...  
+  content end  
+  *************** CONTENT COLUMN END *********************  
+  *************** RIGHT COLUMN ********************  
+ 
+ 
+  widget GAME RADIOGRAFÍA 300x300  
+ HubSpot Call-to-Action Code  
+ 
+ 
+ [if lte IE 8]><div id="hs-cta-ie-element"></div><![endif] 
+ 
+ 
+ 
+ 
+ 
+  end HubSpot Call-to-Action Code  
+  CARLOS SORIA: ÚLTIMAS NOTICIAS  
+ 
+ 
+ Últimas noticias 
+ Garbiñe Muguruza  escala al éxito 
+ 
+  WIDGET TWITTER PERSONALIZADO  
+ Tweets de https://twitter.com/LigaBBVA/lists/ligabbva   
+ 
+  Opta Clasificación Portada  
+ 
+  widget nuevo Facebook  
+  FONDO DE PANTALLA NO MOVIBLE  
+ 
+ 
+  wrap end  
+  sidebar end  
+ 
+  *************** RIGHT COLUMN END ****************  
+  bg_content end  
+  page_shadow end  
+  main end  
+ 
+  *************** FOOTER *************************  
+ 
+ 
+ 
+ Liga BBVA 
+ 2012 © LigaBBVA.com 
+ 
+  bg_content end  
+  page_shadow end  
+ 
+  footer end  
+  *************** FOOTER END *********************  
+ 
+ Acepto 
+Utilizamos cookies propias y de terceros para mejorar nuestros servicios, mostrarle publicidad relacionada con sus preferencias, realizar análisis estadísticos sobre los hábitos de navegación de nuestros usuarios y facilitar la interacción con redes sociales. Si continua navegando consideramos que acepta el uso de cookies.
+
+ 
+ 
+  page end  
+ 

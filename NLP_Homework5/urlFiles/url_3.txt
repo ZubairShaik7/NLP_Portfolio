@@ -1,0 +1,43 @@
+<![endif] Toggle navigation         About FIFA Development Governance Sustainability   
+           2230929 We use "cookies" to collect information.  Click here to read more.     
+     Home Page googleoff: index English English Deutsch FranÃ§ais EspaÃ±ol PortuguÃªs Ø¹Ø±Ø¨Ù Ð ÑÑÑÐºÐ¸Ð¹ æ¥æ¬èª íê¸ googleon: index   esi <esi:choose>
+  <esi:when test="$exists($(HTTP_COOKIE{'FIFAComTracking'}))">
+    $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'FIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
+  </esi:when>
+  <esi:when test="$exists($(HTTP_COOKIE{'MobileFIFAComTracking'}))">
+    $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'MobileFIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
+  </esi:when>
+</esi:choose>  
+ News Photos Videos   
+ FIFA World Cupâ¢ FIFA Tournaments Women's Football FIFA Ranking Live Scores The Best FIFA Football Awards Associations Media   
+ About FIFA Development Governance Sustainability   
+     Events FIFA Beach Soccer World Cup Bahamas 2017 27 Apr 2017 - 07 May 2017 - Bahamas AFC Congress 08 May 2017 - Manama Confederation meetings/Congresses 10 May 2017 - Manama   Meetings Audit and Compliance Committee 08 May 2017 - Manama Finance Committee 09 May 2017 - Manama FIFA Council meeting 09 May 2017 - Manama   Full calendar 
+ The Official Online Store   adidas Russia Home Jersey 2017 $99.99 adidas Germany Home Jersey 2017 $89.99 2018 FIFA World Cupâ¢ Russia Zabivakaâ¢ Mascot Toddler Tee $14.99 adidas Krasava FIFA Confederations Cup Official Match Ball $159.99   
+ Shop Now 
+     Search  fifa.wholesite       Search Powered by Advanced Search     The Club 2879521 Shortlists revealed. VOTE NOW!       Voting for the FIFA Confederations Cup Russia 2017 Be There With Hyundai Contest is now open! 24 slogans submitted by FIFA Club members have made the final shortlist.  Register   
+ Login Please sign in to your FIFA.com user account below. This will allow you to make the most of your account with personalization, plus get access to commenting tools, exclusive games, the chance to win cool football prizes and much, much more. Login   The Club 2879521 Shortlists revealed. VOTE NOW!       Voting for the FIFA Confederations Cup Russia 2017 Be There With Hyundai Contest is now open! 24 slo...  FIFA.com Club News   
+ Activities FIFA Predictor FIFA Ultimate Trivia Discover Your Profile  Screen Name  Edit Comments Log out Login Error  The email address/password you submitted is wrong or could not be found. Please try again. If you are not a member of the FIFA.com Club, please register first.  The email address/password you submitted is wrong or could not be found. Please try again. If you are not a member of the FIFA.com Club, please register first.  This Facebook account is already present  Your Club account has been locked due to a breach of our Terms of Service. Please set up a new account in line with the Club rules.  Review the Club Rules . Alternatively, you can email us by completing our  contact form .  Please enter a valid email address  The email address/password you submitted is wrong or could not be found. Please try again. If you are not a member of the FIFA.com Club, please register first.  Log-in unsuccessful  The social profile is already linked to a FIFA.com Account        
+ 
+ Governance   News Photos Videos   How FIFA Works Competition Disciplinary Finances Playersâ Status and Transfers Security Ethics     
+ Follow us on             Share 
+ 2882666 Media Release FÃ©dÃ©ration Internationale de Football Association FIFA-Strasse 20 - P.O. Box - 8044 Zurich - Switzerland Tel: +41-(0)43-222 7777 - Fax: +41-(0)43.222 7878 googleoff: index Football Governance  googleon: index FIFA Appeal Committee passes decision on Lionel Messi googleoff: index (FIFA.com)  05 May 2017 googleon: index       Â© Getty Images        The FIFA Appeal Committee has upheld the appeal lodged by the Argentinian Football Association, on behalf of the player Lionel Messi, against the  decision  taken by the FIFA Disciplinary Committee, lifting the sanctions imposed on him as a result.  
+ 
+Following a hearing which took place in Zurich on 4 May 2017, the Appeal Committee has set aside the decision taken by the FIFA Disciplinary Committee on 28 March 2017, which, in application of art. 77 a) of the  FIFA Disciplinary Code  (FDC), had found Lionel Messi guilty of infringing art. 57 of the FDC for having directed insulting words at an assistant referee.  
+ 
+Despite the fact that the FIFA Appeal Committee considered Lionel Messi’s behaviour as reproachable, the former concluded that the evidence available was not sufficient to establish to the appropriate standard, i.e. to the comfortable satisfaction of the members of the Appeal Committee, that art. 77 a) of the FDC, according to which the Disciplinary Committee is responsible for sanctioning serious infringements which have escaped the match officials’ attention, could be applied. 
+ 
+The Appeal Committee nevertheless underlines the importance of always showing respect to the match officials, stressing that such a principle is essential in football and any unsporting conduct that may be contrary to the principles of fair play cannot be accepted. 
+ 
+In view of the above decision, the suspension for four matches imposed on Lionel Messi, which entered into force on 28 March 2017, and the fine of CHF 10,000 have been lifted.        
+ Related Items     googleoff: index Russia 2018  googleon: index Lionel Messi suspended for four matches   googleoff: index Tuesday 28 March 2017  googleon: index   Legal and Disciplinary Lionel MESSI 
+ Argentina         googleoff: index English English Deutsch FranÃ§ais EspaÃ±ol PortuguÃªs Ø¹Ø±Ø¨Ù Ð ÑÑÑÐºÐ¸Ð¹ æ¥æ¬èª íê¸ googleon: index Copyright Â©1994 - 2017 FIFA. All rights reserved Widgets Mobile Apps Mobile Version Contact FIFA Downloads Privacy Policy Terms of Service All Social Channels           
+   esi <esi:choose><esi:when test="$exists($(HTTP_COOKIE{'FIFAComTracking'}))">
+      <esi:assign name="omnitureCookie" value="$(HTTP_COOKIE{'FIFAComTracking'})"></esi:assign>
+      </esi:when>
+      <esi:otherwise>
+      <esi:assign name="omnitureCookie" value="$time() + $rand()"></esi:assign>
+      <esi:vars>
+		      $add_header('Set-Cookie', 'FIFAComTracking='+ $(omnitureCookie)+ ';path=/;domain=.fifa.com; ')
+      </esi:vars>
+      </esi:otherwise></esi:choose>
+       esi<esi:choose><esi:when test="$(HTTP_HOST) has_i 'm.'"><esi:assign name="siteVersion">mobile_noscript</esi:assign></esi:when><esi:when test="$(HTTP_HOST) has_i 'touch.'"><esi:assign name="siteVersion">mobile_noscript</esi:assign></esi:when><esi:otherwise><esi:assign name="siteVersion">web_noscript</esi:assign></esi:otherwise></esi:choose><img height="5" width="5" src="http://metrics.fifa.com/b/ss/<esi:include src="/esicontent/library/_scaccount.html" onerror="continue"/>/5/<esi:vars>$(randomNumber)</esi:vars>?gn=governance:news:newsid&amp;ch=governance&amp;ev=event2<esi:choose><esi:when test="(($exists($(HTTP_COOKIE{'FIFAComClub'}))) && ($(HTTP_REFERER) matches '''/theclub/index.html'''))">,event7</esi:when></esi:choose><esi:choose><esi:when test="($(HTTP_REFERER) matches '''/theclub/registration/validate.htmx''') || ($(HTTP_REFERER) matches '''/theclub/registration/index.html''')">,event19</esi:when></esi:choose>&amp;c1=governance:news&amp;c2=governance:news&amp;c3=governance:news&amp;c4=governance:news&amp;c5=newsid&amp;c50=D=User-Agent&amp;c11=en&amp;c43=<esi:vars>$(siteVersion)</esi:vars>&amp;c12=en:governance:news:newsid&amp;v15=governance:news&amp;v51=governance:news&amp;v52=governance:news&amp;v53=governance:news&amp;v5=newsid&amp;h1=governance,news&amp;h2=en,governance,news<esi:choose><esi:when test="$(QUERY_STRING{cid})">&amp;v0=<esi:vars>$url_encode($(QUERY_STRING{cid}))</esi:vars></esi:when></esi:choose>&amp;v50=D=User-Agent&amp;v11=D=c11&amp;v8=D=gn&amp;v9=D=ch&amp;vid=<esi:vars>$(omnitureCookie)</esi:vars>&amp;g=http%3A%2F%2F<esi:vars>$(HTTP_HOST)</esi:vars>%2fgovernance%2fnews%2fy%3d2017%2fm%3d5%2fnews%3dfifa-appeal-committee-passes-decision-on-lionel-messi-2882666.html<esi:choose><esi:when test="$(HTTP_REFERER)">&amp;r=<esi:vars>$url_encode($(HTTP_REFERER))</esi:vars></esi:when></esi:choose>"/>

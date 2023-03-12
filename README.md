@@ -59,3 +59,13 @@ You can see the code where we created the unigram and bigram dictionaries from t
 The code for test our model can be found [here](NLP_Homework3/zas180004_hw3_program2.py)
 
 A short narrative on N-Grams can be found [here](NLP_Homework3/N-gram-narrative.pdf)
+
+## Assignment 5 - Web Crawler
+
+This program allowed us to crawl through websites using BeautifulSoup to scrape data about a certain topic and process
+the text by cleaning and tokenizing it. We used the text to create a knowledge base of facts to use in our chatbot
+
+You can see the code where we created the knowledge base
+[here](NLP_Homework5/zas180004_hw5.py)
+
+A short narrative on Web Crawling can be found [here](NLP_Homework5/Web_Crawler_Report.pdf)
