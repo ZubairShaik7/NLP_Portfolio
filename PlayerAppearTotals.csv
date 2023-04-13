@@ -3,14 +3,14 @@
 1,Iker Casillas,177
 2,Lionel Messi,156
 3,Xavi Hernández,151
-4,Karim Benzema,(12)
+4,Karim Benzema,145
 5,Raúl González,142
 6,Ryan Giggs,141
-7,Thomas Müller,(10)
+7,Thomas Müller,135
 8,Andrés Iniesta,130
 9,Sergio Ramos,129
 10,Manuel Neuer,128
-11,Toni Kroos,(12)
+11,Toni Kroos,125
 12,Sergio Busquets,125
 13,Clarence Seedorf,125
 14,Gianluigi Buffon,124
@@ -33,12 +33,12 @@
 31,Patrice Evra,108
 32,Andrea Pirlo,108
 33,David Beckham,107
-34,Luka Modrić,(13)
-35,Robert Lewandowski,(10)
+34,Luka Modrić,106
+35,Robert Lewandowski,106
 36,Víctor Valdés,106
 37,Frank Lampard,105
 38,Cesc Fàbregas,104
-39,David Alaba,(12)
+39,David Alaba,103
 40,Oliver Kahn,103
 41,Luís Figo,103
 42,Fernandinho,103
@@ -80,7 +80,7 @@
 78,Robert Pirès,82
 79,Koke,82
 80,Mikaël Silvestre,82
-81,Casemiro,(11)
+81,Casemiro,82
 82,Frank de Boer,81
 83,Sergei Ignashevich,81
 84,Filippo Inzaghi,81
@@ -107,12 +107,12 @@
 105,Mark van Bommel,76
 106,Patrick Vieira,76
 107,Sylvain Wiltord,76
-108,Thiago Alcántara,(10)
+108,Thiago Alcántara,75
 109,Neymar,75
 110,Deco,75
 111,Giorgio Chiellini,74
 112,Edgar Davids,74
-113,İlkay Gündoğan,(10)
+113,İlkay Gündoğan,74
 114,Alex Sandro,74
 115,Pavel Nedvěd,74
 116,Christian Panucci,74
@@ -125,7 +125,7 @@
 123,Sidney Govou,73
 124,Mats Hummels,73
 125,Claudio Pizarro,73
-126,Raheem Sterling,(12)
+126,Raheem Sterling,73
 127,Luis Suárez,73
 128,Ruud van Nistelrooy,73
 129,Isco,72
@@ -136,10 +136,10 @@
 134,Anthony Réveillère,72
 135,Walter Samuel,72
 136,Marco Verratti,72
-137,Raúl Albiol,(12)
+137,Raúl Albiol,71
 138,Willian,71
 139,William Gallas,71
-140,Mohamed Salah,(13)
+140,Mohamed Salah,71
 141,Roy Keane,71
 142,Patrick Kluivert,71
 143,John O’Shea,71
@@ -157,11 +157,11 @@
 155,Yaya Touré,70
 156,Gianluca Zambrotta,70
 157,Giovane Elber,69
-158,Jan Oblak,(10)
+158,Jan Oblak,69
 159,Mesut Özil,69
 160,Nicolas Anelka,68
 161,Álvaro Arbeloa,68
-162,Dani Carvajal,(11)
+162,Dani Carvajal,68
 163,Blaise Matuidi,68
 164,Fernando Hierro,68
 165,Nicky Butt,67
@@ -175,10 +175,10 @@
 173,Alex,66
 174,Emmanuel Eboué,66
 175,Javi Martínez,66
-176,Bernardo Silva,(11)
+176,Bernardo Silva,66
 177,Santiago Cañizares,65
 178,Alessandro Costacurta,65
-179,Thibaut Courtois,(13)
+179,Thibaut Courtois,65
 180,Hernán Crespo,65
 181,James Milner,65
 182,Nicolás Otamendi,65
@@ -194,7 +194,7 @@
 192,Alexis Sánchez,64
 193,Júlio César,64
 194,Wojciech Szczęsny,64
-195,Fabinho,(13)
+195,Fabinho,63
 196,Wes Brown,63
 197,Lucho González,63
 198,Keylor Navas,63
@@ -228,8 +228,8 @@
 226,Ricardo Quaresma,60
 227,Dimitar Berbatov,60
 228,Iván Córdoba,60
-229,Kevin De Bruyne,(10)
-230,Ederson,(11)
+229,Kevin De Bruyne,60
+230,Ederson,60
 231,Jefferson Farfán,60
 232,Erik Hoftun,60
 233,Nwankwo Kanu,60
@@ -273,6 +273,6 @@
 271,David de Gea,55
 272,Cafu,55
 273,Mathieu Flamini,55
-274,Sadio Mané,(13)
+274,Sadio Mané,55
 275,Adrien Rabiot,55
 276,Bent Skammelsrud,55
