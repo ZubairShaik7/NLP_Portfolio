@@ -133,4 +133,3 @@ What player that is left footed has the most goals in the Champions League?: Pla
 What player that is right footed has the most goals in the Champions League?: Player
 What player that is left footed has the least goals in the Champions League?: Player
 What player that is right footed has the least goals in the Champions League?: Player
-
