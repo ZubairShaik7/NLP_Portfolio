@@ -62,7 +62,7 @@ Is Sevilla FC from Spain?: Team
 Club Brugge is located in what country?: Team
 How many total goals does AFC Ajax have?: Team
 Has FC Porto ever won a Champions League?: Team
-Has Manchester City ever won a Champions League or been a runner up?: Team
+Has Manchester City ever won a Champions League or been a runner up?: Final
 Is Celtic FC a club?: Team
 Who is the top goalscorer for FC Porto?: Player
 Who has the most assists on FC Salzburg?: Player
@@ -78,24 +78,24 @@ Where is FK Partizan from?: Team
 What team is FK Partizan?: Team
 FC Nantes has how many top goalscorers?: Player
 How many times has Real Madrid won the Champions League?: Team
-How many times has FC Barcelona been runner up in the Champions League?: Team
-Where was the location of the 2002-2003 Champions League final?: Team
+How many times has FC Barcelona been runner up in the Champions League?: Final
+Where was the location of the 2002-2003 Champions League final?: Final
 Who has the least amount of Champions League appearances out of the top goal scorers?: Player
-How many times has Wembley Stadium been the location for the Champions League final?: Team
+How many times has Wembley Stadium been the location for the Champions League final?: Final
 How many times has Juventus won the Champions League?: Team
 What position does Ronaldo play?: Player
 How much does Zlatan Ibrahimovic weigh?: Player
 What foot does Antoine Griezmann shoot with?: Player
-Who was the runner up for the 1982-1983 Champions League final?: Team
-What was the score for the 2000-2001 Champions League final and what teams played?: Team
-What teams played in the 2005-2006 Champion Leagues final?: Team
-How many times has the Champions League final been played in Italy?: Team
+Who was the runner up for the 1982-1983 Champions League final?: Final
+What was the score for the 2000-2001 Champions League final and what teams played?: Final
+What teams played in the 2005-2006 Champion Leagues final?: Final
+How many times has the Champions League final been played in Italy?: Final
 How many italian teams have won the champions league?: Team
-How many spanish teams have been the runner up in the Champions League?: Team
-What Champions League final had the highest attendance?: Team
-What was the attendance for the 1994-1995 Champions League Final?: Team
+How many spanish teams have been the runner up in the Champions League?: Final
+What Champions League final had the highest attendance?: Final
+What was the attendance for the 1994-1995 Champions League Final?: Final
 What is the total appearances made by FC Salzburg?: Team
-What is the country of Origin for the 2008-2009 Finals?: Team
+What is the country of Origin for the 2008-2009 Finals?: Final
 What is the height of Wayne Rooney?: Player
 What foot does Marco Reus shoot with?: Player
 When was Wayne Rooney born?: Player
@@ -104,12 +104,12 @@ What year was Dzeko born?: Player
 What players were born before the year 2000?: Player
 Which players are shorter than 170 cm?: Player
 Did Juventus ever win a Champions League final?: Team
-What location was the 2010-2011 Champions League final held at and who played in it?: Team
-What two teams played in the 2009-2010 Champions League final?: Team
-What was the score of the 2000-2001 Champions League final?: Team
+What location was the 2010-2011 Champions League final held at and who played in it?: Final
+What two teams played in the 2009-2010 Champions League final?: Final
+What was the score of the 2000-2001 Champions League final?: Final
 Who is the oldest top goalscorer of the champions League?: Player
 who is the youngest top goalscorer of the champions league?: Player
-Give details about the 1998-1999 Champions League Final?: Team
+Give details about the 1998-1999 Champions League Final?: Final
 What is the most common foot that players are dominant in?: Player
 Tell me about Lionel Messi?: Player
 What can you tell me about Zlatan Ibrahimovic?: Player
@@ -120,8 +120,8 @@ Who is the shortest player in the champions league?: Player
 What player weighs the most in the champions league?: Player
 What player weighs the least in the champions league?: Player
 What team do most of the players from the champions league come from?: Player
-What final had the lowest attendance of a finals?: Team
-What was the attendance of the 1990-1991 Final and what teams played in it?: Team
+What final had the lowest attendance of a finals?: Final
+What was the attendance of the 1990-1991 Final and what teams played in it?: Final
 What was the highest attendance of a finals match?: Team
 When was Arjen Robben born?: Player
 What is Lionel Messi's weight?: Player
@@ -133,3 +133,15 @@ What player that is left footed has the most goals in the Champions League?: Pla
 What player that is right footed has the most goals in the Champions League?: Player
 What player that is left footed has the least goals in the Champions League?: Player
 What player that is right footed has the least goals in the Champions League?: Player
+What team has the most champions league trophies?: Team
+Where was the 1972-1973 Champions League final?: Final
+Which team has the most goals out of all the champions league teams?: Team
+What teams played in the 2006-2007 finals?: Final
+Did Juventus play in the 1983-1984 finals?: Final
+What was the date of the 2001-2002 Champions League final?: Final
+Who was the runner up in the 2019-2020 Champions League final?: Final
+Where was the most attended Champions League final?: Final
+What country has hosted the most Champions League finals?: Final
+What stadium has had the most opportunities to host the Champions League finals?: Final
+What team has the most champions league titles?: Team
+What Finals were played in London?: Final

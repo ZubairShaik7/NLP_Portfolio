@@ -2,13 +2,12 @@ import os
 import pickle
 import sqlite3
 import pandas as pd
+import spacy
 from nltk.corpus.reader import nltk
 from difflib import SequenceMatcher
-from sklearn.naive_bayes import MultinomialNB
+from nltk.corpus import stopwords
 
 nltk.download('stopwords')
-from nltk.corpus import stopwords
-import spacy
 
 # load a model
 nlp = spacy.load('en_core_web_md')
@@ -45,7 +44,6 @@ def getClosestMatch(df, name, columns):
     for (columnName, columnData) in df[columns].iteritems():
         for value in columnData.values:
             currScore = SequenceMatcher(None, value, name)
-            print(currScore.ratio(), value, highest_score)
             if currScore.ratio() > highest_score:
                 highest_score = currScore.ratio()
                 highest_name = value
@@ -53,11 +51,10 @@ def getClosestMatch(df, name, columns):
 
 
 def runModel(question):
-    curr = list(question)
-    X_test = loaded_vectorizer.transform(curr).toarray()
-    print(X_test)
+    question = [question]
+    X_test = loaded_vectorizer.transform(question).toarray()
     pred = model.predict(X_test)
-    return pred[0]
+    return pred
 
 
 class UserModel:
@@ -78,7 +75,7 @@ class UserModel:
 
 def runBot():
     user.name = input("To start, please enter your name so I can remember you for next time or remember you from "
-                      "before.")
+                      "before. ")
     if os.path.exists(f'users/{user.name}.txt'):
         with open(f'users/{user.name}.txt', 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -100,9 +97,9 @@ def runBot():
     user.introduction = True
     while not user.logout:
         if user.firstTime:
-            user.question = input(f"So {user.name}, What would you like answered today?")
+            user.question = input(f"So {user.name}, What would you like answered today? ")
         else:
-            user.question = input(f"Anything else you want answered {user.name}?")
+            user.question = input(f"Anything else you want answered {user.name}? ")
         if user.question == 'logout':
             if user.name:
                 filename = f'users/{user.name}.txt'
@@ -146,7 +143,6 @@ def runBot():
             doc = nlp(user.question)
             person = ''
             for token in doc:
-                print(token, token.lemma_, token.pos_, token.tag_)
                 if token.tag_ == 'NNP' or token.tag_ == 'NN':
                     person = str(token)
             if person != '':
@@ -157,7 +153,6 @@ def runBot():
                     if person in dislike:
                         print("You still want to know about him? Even though you dont like him.")
                 person = getClosestMatch(user.playersDF, person, ['Player'])
-                print(person)
                 if 'goal' in user.question.lower() or 'score' in user.question.lower():
                     playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
                     print(person + ' has scored a champions league total of ' + str(
@@ -207,24 +202,90 @@ def runBot():
                     print(person + ' plays ' + str(playerAtts.iloc[0]['Preffered_Position']) + ' position')
                     if playerAtts.iloc[0]['Preffered_Position'] is None:
                         print(f"Sorry, we dont have that information on {person}")
-            elif user.intent == 'Team':
-                doc = nlp(user.question)
-                person = ''
-                for token in doc:
-                    print(token, token.lemma_, token.pos_, token.tag_)
-                    if token.tag_ == 'NNP' or token.tag_ == 'NN':
-                        person = str(token)
-
-            elif user.intent == 'Final':
-                doc = nlp(user.question)
-                person = ''
-                for token in doc:
-                    print(token, token.lemma_, token.pos_, token.tag_)
-                    if token.tag_ == 'NNP' or token.tag_ == 'NN':
-                        person = str(token)
-            else:
-                print(
-                    "I couldn't find that person in my records unfortunately, try specifying or ask another question.")
+        elif user.intent == 'Team':
+            doc = nlp(user.question)
+            team = ''
+            for token in doc:
+                if token.tag_ == 'NNP' or token.tag_ == 'NN':
+                    team += str(token) + ' '
+            if team != '':
+                for like in user.likes:
+                    if team in like:
+                        print("This team must be your favorite, since you ask about them a lot!")
+                for dislike in user.dislikes:
+                    if team in dislike:
+                        print("You still want to know about this team, even though you dont like them?")
+                team = getClosestMatch(user.clubsDF, team, ['Club'])
+                if 'country' in user.question.lower() or 'nation' in user.question.lower() \
+                        or 'origin' in user.question.lower() or 'from' in user.question.lower():
+                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                    print(team + ' is located in ' + country_dict[str(clubAtts.iloc[0]['Country'])] + '.')
+                    if clubAtts.iloc[0]['Country'] is None:
+                        print(f"Sorry, we dont have that information on {team}")
+                elif 'titles' in user.question.lower() or 'trophies' in user.question.lower() \
+                        or 'first' in user.question.lower():
+                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                    print(clubAtts)
+                    print(team + ' has won the Champions League ' + str(clubAtts.iloc[0]['Titles'])
+                          + ' times.')
+                    if clubAtts.iloc[0]['Titles'] is None:
+                        print(f"Sorry, we dont have that information on {team}")
+                elif 'wins' in user.question.lower() or 'won' in user.question.lower() \
+                        or 'loss' in user.question.lower() or 'lost' in user.question.lower() \
+                        or 'draw' in user.question.lower() or 'tie' in user.question.lower():
+                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                    print(team + ' has won ' + str(clubAtts.iloc[0]['Win'])
+                          + ' times, drawn ' + str(clubAtts.iloc[0]['Draw'])
+                          + ' times, and lost ' + str(clubAtts.iloc[0]['Loss'])
+                          + ' times.')
+                    if clubAtts.iloc[0]['Win'] is None:
+                        print(f"Sorry, we dont have that information on {team}")
+                elif 'goals' in user.question.lower() or 'scored' in user.question.lower():
+                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                    print(team + ' has scored ' + str(clubAtts.iloc[0]['Goals For'])
+                          + ' times in the Champions League.')
+                    if clubAtts.iloc[0]['Goals For'] is None:
+                        print(f"Sorry, we dont have that information on {team}")
+        elif user.intent == 'Final':
+            doc = nlp(user.question)
+            date = ''
+            for token in doc:
+                if token.pos_ == 'NUM' or token.tag_ == 'CD':
+                    date += str(token) + '-'
+            date = getClosestMatch(user.winnersDF, date, ['SEASONS'])
+            if 'where' in user.question.lower() or 'location' in user.question.lower() \
+                    or 'held' in user.question.lower():
+                clubAtts = user.winnersDF.loc[user.winnersDF['SEASONS'] == date]
+                print('The ' + date + ' Champions League final was held in ' + str(clubAtts.iloc[0]['VENUE'])
+                      + ' with an attendance of ' + str(clubAtts.iloc[0]['ATTENDANCE']) + '.')
+                if clubAtts.iloc[0]['VENUE'] is None:
+                    print(f"Sorry, we dont have that information on the {date} Champions League final.")
+            elif 'won' in user.question.lower() or 'champion' in user.question.lower() \
+                    or 'winner' in user.question.lower():
+                clubAtts = user.winnersDF.loc[user.winnersDF['SEASONS'] == date]
+                print('The ' + date + ' Champions League final winner was ' + str(clubAtts.iloc[0]['WINNERS_TEAM'])
+                      + ' from ' + country_dict[str(clubAtts.iloc[0]['WINNERS_NATION'])] + '.')
+                if clubAtts.iloc[0]['WINNERS_TEAM'] is None:
+                    print(f"Sorry, we dont have that information on the {date} Champions League final.")
+            elif 'lost' in user.question.lower() or 'runner up' in user.question.lower() \
+                    or 'second' in user.question.lower() or 'loser' in user.question.lower():
+                clubAtts = user.winnersDF.loc[user.winnersDF['SEASONS'] == date]
+                print('The ' + date + ' Champions League final runner up was '
+                      + str(clubAtts.iloc[0]['RUNNERS_UP_TEAM']) + ' from '
+                      + country_dict[str(clubAtts.iloc[0]['RUNNERS_UP_NATION'])] + '.')
+                if clubAtts.iloc[0]['RUNNERS_UP_TEAM'] is None:
+                    print(f"Sorry, we dont have that information on the {date} Champions League final.")
+            elif 'score' in user.question.lower() or 'result' in user.question.lower() \
+                    or 'outcome' in user.question.lower() or 'loser' in user.question.lower():
+                clubAtts = user.winnersDF.loc[user.winnersDF['SEASONS'] == date]
+                print('The ' + date + ' Champions League final score was ' + str(clubAtts.iloc[0]['SCORE'])
+                      + ' between ' + str(clubAtts.iloc[0]['WINNERS_TEAM']) + ' and '
+                      + str(clubAtts.iloc[0]['RUNNERS_UP_TEAM']))
+                if clubAtts.iloc[0]['SCORE'] is None:
+                    print(f"Sorry, we dont have that information on the {date} Champions League final.")
+        else:
+            print(
+                "I couldn't find that person in my records unfortunately, try specifying or ask another question.")
 
 
 if __name__ == "__main__":

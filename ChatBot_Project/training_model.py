@@ -5,12 +5,12 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import BernoulliNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.metrics import classification_report
 
 
-url = 'Data.txt'
+url = 'Champions_League_data2.txt'
 data = pd.read_csv(url, index_col=False, sep=": ", names=["question", "group"])
 df = pd.DataFrame(data)
 
@@ -26,7 +26,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, train_
 X_train = vectorizer.fit_transform(X_train)
 X_test = vectorizer.transform(X_test)
 
-naive_bayes = BernoulliNB()
+naive_bayes = MultinomialNB()
 naive_bayes.fit(X_train, y_train)
 
 pred = naive_bayes.predict(X_test)
