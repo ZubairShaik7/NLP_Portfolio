@@ -38,6 +38,7 @@ country_dict = {"ESP": "Spain", "ENG": "England", "ITA": "Italy", "GER": "German
                 "MNE": "Montegro", "KOS": "Kosovo", "GIB": "Gibraltar", "AND": "Andorra", "SMR": "San Marino"}
 
 
+# Use this function to get the closest similarity between two words using SequenceMatcher
 def getClosestMatch(df, name, columns):
     highest_name = ''
     highest_score = 0
@@ -50,6 +51,7 @@ def getClosestMatch(df, name, columns):
     return str(highest_name)
 
 
+# run the model on the user input to get the predictions
 def runModel(question):
     question = [question]
     X_test = loaded_vectorizer.transform(question).toarray()
@@ -57,6 +59,7 @@ def runModel(question):
     return pred
 
 
+# instantiate the user with a new model to store all the personal info
 class UserModel:
     def __init__(self):
         self.name = ''
@@ -66,6 +69,7 @@ class UserModel:
         self.introduction = False
         self.likes = list()
         self.dislikes = list()
+        self.context = list()
         self.intent = ''
         self.playersDF = pd.read_sql('SELECT * FROM players', conn)
         self.winnersDF = pd.read_sql('SELECT * FROM winners', conn)
@@ -76,23 +80,31 @@ class UserModel:
 def runBot():
     user.name = input("To start, please enter your name so I can remember you for next time or remember you from "
                       "before. ")
+    # check if user has file stored already and read context from it
     if os.path.exists(f'users/{user.name}.txt'):
         with open(f'users/{user.name}.txt', 'r', encoding='utf-8') as f:
             lines = f.readlines()
             for line in lines:
                 if line.startswith('+'):
-                    user.likes.append(line)
+                    user.context.append(line)
                 else:
-                    user.dislikes.append(line)
+                    user.context.append(line)
+            for l in user.context:
+                if l.startswith('+'):
+                    user.likes.append(l)
+                else:
+                    user.dislikes.append(l)
+            f.close()
         print(f"Hello {user.name}, Welcome back! I remember you liked {user.likes}")
     else:
-        print("Hey I'm Marcus, your personal assistant for Champions League info! You can ask me questions"
-              "about the clubs historically present in the Champions League, or even about players that played in "
-              "it! Some sample questions would be:"
-              "- Who does Messi play for?"
-              "- What country is Real Madrid located in?"
-              "- How many trophies does Liverpool have?"
-              "Additionally if you would like to leave the chat please enter logout")
+        print("Hey I'm Marcus, your personal assistant for Champions League info! You can ask me questions \n"
+              "about the clubs historically present in the Champions League, or even about players that played in \n"
+              "it! Some sample questions would be: \n"
+              "- Who does Messi play for? \n"
+              "- What country is Real Madrid located in? \n"
+              "- How many trophies does Liverpool have? \n"
+              "Please make sure to capitalize all players and club names, as well as type out the full form \n"
+              "Additionally if you would like to leave the chat please enter logout \n")
     user.isNewUser = False
     user.introduction = True
     while not user.logout:
@@ -105,16 +117,28 @@ def runBot():
                 filename = f'users/{user.name}.txt'
                 if not os.path.exists(os.path.dirname(filename)):
                     os.makedirs(os.path.dirname(filename))
-                with open(filename, 'w', encoding='utf-8') as f:
+                with open(filename, 'a', encoding='utf-8') as f:
                     for item in user.likes:
-                        f.write('+ ' + item + '\n')
+                        flag = False
+                        for ctx in user.context:
+                            if item in ctx:
+                                flag = True
+                        if not flag:
+                            f.write('+ ' + item + ' \n')
                     for item in user.dislikes:
-                        f.write('- ' + item + '\n')
+                        flag = False
+                        for ctx in user.context:
+                            if item in ctx:
+                                flag = True
+                        if not flag:
+                            f.write('- ' + item + ' \n')
+                    f.close()
             user.logout = True
             user.introduction = True
             print(f"Thanks for stopping by {user.name}!")
             continue
         user.intent = runModel(user.question)
+        # base the responses off the user intent from the question they asked
         if 'dont like' in user.question or 'hate' in user.question or 'dislike' in user.question:
             print('Got it! I will remember that for next time.')
             doc = nlp(user.question)
@@ -129,7 +153,7 @@ def runBot():
                 if counter == targetIDX + 2:
                     targetWord = str(token)
             idx = user.question.index(targetWord)
-            user.dislikes.append(user.question[idx + 1:])
+            user.dislikes.append(user.question[idx:])
         elif 'like' in user.question or 'love' in user.question or 'enjoy' in user.question:
             print('Got it! I will remember that for next time.')
             doc = nlp(user.question)
@@ -138,7 +162,7 @@ def runBot():
                 if token.tag_ == 'VBP':
                     targetWord = str(token)
             idx = user.question.index(targetWord)
-            user.likes.append(user.question[idx + 1:])
+            user.likes.append(user.question[idx:])
         elif user.intent == 'Player':
             doc = nlp(user.question)
             person = ''
@@ -147,24 +171,40 @@ def runBot():
                     person = str(token)
             if person != '':
                 for like in user.likes:
-                    if person in like:
+                    if person in like.upper():
                         print("This player must be your favorite, since you ask about him a lot!")
                 for dislike in user.dislikes:
-                    if person in dislike:
+                    if person in dislike.upper():
                         print("You still want to know about him? Even though you dont like him.")
                 person = getClosestMatch(user.playersDF, person, ['Player'])
                 if 'goal' in user.question.lower() or 'score' in user.question.lower():
-                    playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
-                    print(person + ' has scored a champions league total of ' + str(
-                        playerAtts.iloc[0]['Goals']) + ' scored.')
-                    if playerAtts.iloc[0]['Goals'] is None:
-                        print(f"Sorry, we dont have that information on {person}")
+                    if 'most' in user.question.lower() or 'highest' in user.question.lower() \
+                            or 'top' in user.question.lower():
+                        playerAtts = user.playersDF.loc[user.playersDF['Player'] == 'Cristiano Ronaldo']
+                        print('Cristiano Ronaldo has scored a champions league total of ' + str(
+                            playerAtts.iloc[0]['Goals']) + ' scored.')
+                        if playerAtts.iloc[0]['Goals'] is None:
+                            print(f"Sorry, we dont have that information on {person}")
+                    else:
+                        playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
+                        print(person + ' has scored a champions league total of ' + str(
+                            playerAtts.iloc[0]['Goals']) + ' scored.')
+                        if playerAtts.iloc[0]['Goals'] is None:
+                            print(f"Sorry, we dont have that information on {person}")
                 elif 'appear' in user.question.lower() or 'caps' in user.question.lower() or \
                         'played' in user.question.lower():
-                    playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
-                    print(person + ' has a total of ' + str(playerAtts.iloc[0]['Appearances']) + ' appearances')
-                    if playerAtts.iloc[0]['Appearances'] is None:
-                        print(f"Sorry, we dont have that information on {person}")
+                    if 'most' in user.question.lower() or 'highest' in user.question.lower() \
+                            or 'top' in user.question.lower():
+                        playerAtts = user.playersDF.loc[user.playersDF['Player'] == 'Cristiano Ronaldo']
+                        print('Cristiano Ronaldo has scored a champions league total of ' + str(
+                            playerAtts.iloc[0]['Goals']) + ' scored.')
+                        if playerAtts.iloc[0]['Goals'] is None:
+                            print(f"Sorry, we dont have that information on {person}")
+                    else:
+                        playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
+                        print(person + ' has a total of ' + str(playerAtts.iloc[0]['Appearances']) + ' appearances')
+                        if playerAtts.iloc[0]['Appearances'] is None:
+                            print(f"Sorry, we dont have that information on {person}")
                 elif 'country' in user.question.lower() or 'nation' in user.question.lower() or \
                         'from' in user.question.lower():
                     playerAtts = user.playersDF.loc[user.playersDF['Player'] == person]
@@ -224,28 +264,51 @@ def runBot():
                         print(f"Sorry, we dont have that information on {team}")
                 elif 'titles' in user.question.lower() or 'trophies' in user.question.lower() \
                         or 'first' in user.question.lower():
-                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
-                    print(clubAtts)
-                    print(team + ' has won the Champions League ' + str(clubAtts.iloc[0]['Titles'])
-                          + ' times.')
-                    if clubAtts.iloc[0]['Titles'] is None:
-                        print(f"Sorry, we dont have that information on {team}")
+                    if 'most' in user.question.lower() or 'highest' in user.question.lower() \
+                            or 'top' in user.question.lower():
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == 'Real Madrid CF']
+                        print('Real Madrid CF has won the most Champions League, winning '
+                              + str(clubAtts.iloc[0]['Titles']) + ' times.')
+                        if clubAtts.iloc[0]['Titles'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
+                    else:
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                        print(team + ' has won the Champions League ' + str(clubAtts.iloc[0]['Titles'])
+                              + ' times.')
+                        if clubAtts.iloc[0]['Titles'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
                 elif 'wins' in user.question.lower() or 'won' in user.question.lower() \
                         or 'loss' in user.question.lower() or 'lost' in user.question.lower() \
                         or 'draw' in user.question.lower() or 'tie' in user.question.lower():
-                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
-                    print(team + ' has won ' + str(clubAtts.iloc[0]['Win'])
-                          + ' times, drawn ' + str(clubAtts.iloc[0]['Draw'])
-                          + ' times, and lost ' + str(clubAtts.iloc[0]['Loss'])
-                          + ' times.')
-                    if clubAtts.iloc[0]['Win'] is None:
-                        print(f"Sorry, we dont have that information on {team}")
+                    if 'most' in user.question.lower() or 'highest' in user.question.lower() \
+                            or 'top' in user.question.lower():
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == 'Real Madrid CF']
+                        print('Real Madrid CF has won the most Champions League games, winning '
+                              + str(clubAtts.iloc[0]['Win']) + ' times.')
+                        if clubAtts.iloc[0]['Win'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
+                    else:
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                        print(team + ' has won ' + str(clubAtts.iloc[0]['Win'])
+                              + ' times, drawn ' + str(clubAtts.iloc[0]['Draw'])
+                              + ' times, and lost ' + str(clubAtts.iloc[0]['Loss'])
+                              + ' times.')
+                        if clubAtts.iloc[0]['Win'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
                 elif 'goals' in user.question.lower() or 'scored' in user.question.lower():
-                    clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
-                    print(team + ' has scored ' + str(clubAtts.iloc[0]['Goals For'])
-                          + ' times in the Champions League.')
-                    if clubAtts.iloc[0]['Goals For'] is None:
-                        print(f"Sorry, we dont have that information on {team}")
+                    if 'most' in user.question.lower() or 'highest' in user.question.lower() \
+                            or 'top' in user.question.lower():
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == 'Real Madrid CF']
+                        print('Real Madrid CF has won the most Champions League games, winning '
+                              + str(clubAtts.iloc[0]['Goals For']) + ' times.')
+                        if clubAtts.iloc[0]['Goals For'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
+                    else:
+                        clubAtts = user.clubsDF.loc[user.clubsDF['Club'] == team]
+                        print(team + ' has scored ' + str(clubAtts.iloc[0]['Goals For'])
+                              + ' times in the Champions League.')
+                        if clubAtts.iloc[0]['Goals For'] is None:
+                            print(f"Sorry, we dont have that information on {team}")
         elif user.intent == 'Final':
             doc = nlp(user.question)
             date = ''
@@ -284,10 +347,10 @@ def runBot():
                 if clubAtts.iloc[0]['SCORE'] is None:
                     print(f"Sorry, we dont have that information on the {date} Champions League final.")
         else:
-            print(
-                "I couldn't find that person in my records unfortunately, try specifying or ask another question.")
+            print("I couldn't find that person in my records unfortunately, try specifying or ask another question.")
 
 
+# run the main app
 if __name__ == "__main__":
     conn = sqlite3.connect("champions_league_database2")
     user = UserModel()
