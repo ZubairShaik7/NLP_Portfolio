@@ -69,3 +69,41 @@ You can see the code where we created the knowledge base
 [here](NLP_Homework5/zas180004_hw5.py)
 
 A short narrative on Web Crawling can be found [here](NLP_Homework5/Web_Crawler_Report.pdf)
+
+## Assignment 6: Parsing Sentences
+
+In this assignment, I usaed PSG, dependency, and SRL parsing to anaalyze sentences and understand how they should be parsed.
+
+You can view my paper analyzing complex sentences [here](Sentence-Parsing.pdf)
+
+## Assignment 7: ACL Paper Summary
+
+In this assignment, I analyze a reasearch paper about task oriented dialogue and write a paper over it.
+
+You can view my paper [here](2022.acl-long.425.pdf)
+
+## Assignment 8 - Chatbot
+
+In this project, I created a chatbot which talks about the Champions league and is able to asnwer fact based questions about it.  
+I used various NLP techniques including NER, tf-idf, and vectorization along with many more. The knowledge base was generated through datasets
+pulled through kaggle and converted into a sqlite database. I used a Naive Bayes model to train the model on a set of questions and return an intent.
+
+You can see the code where we created chatbot  [here](ChatBot_Project/bot.py)
+
+The training model can be found [here](ChatBot_Project/training_model.py)
+
+A report on the project can be found [here](ChatBot_Project/ChatBot_Report.pdf)
+
+To run the program, use the following commands within the same directory as the file:
+1. python3 training_model.py
+2. python3 bot.py (insert path to text file)
+
+## Assignment 9: Text Classification
+
+In this assignment, I analyzed a dataset which contains true and fake news articles and attempted to classify them based off the text from the articles
+using various different NLP algorithms including CNN, Embeddings, and Neural Networks.
+
+You can view my notebook [here](text_classification_hlt.pdf)
+
+## Portfolio Summary
+This course has really allowed me to dive deep into the world of Natural Language Processing and has helped me pick up valuable skills for my future career within Software Engineering and Data Science. I really enjoyed learning about topics like Parts of Speech tagging and Neural Netowrks. With the explosion of AI based tools, including ChatGPT, I feel that it is invaluable and essential to be well versed in that domain moving forward and this course has given me the confidence to do so. The ChatBot project was my favorite assignment to work on as it incorporated all of the techniques and skills we were working on throughout the course and allowed me to combine everything to make a useful product. Overall, I will use the skills learned here for a long time and will continue to wet my feet in this domain.
